@@ -77,7 +77,7 @@ def process_data(raw_data):
     return account_summary, day_wise_summary
 
 # Streamlit App Title
-st.title("Daily Revenue Dashboard")
+st.title("FB Revenue Dashboard")
 
 # File Uploader
 uploaded_file = st.file_uploader("Upload your revenue data (CSV format)", type=["csv"])
