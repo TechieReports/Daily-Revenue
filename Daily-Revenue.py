@@ -21,9 +21,11 @@ def map_accounts(data):
     data.loc[data['campid'].between(406488, 406537), 'Account'] = 'TRAVADO PST-9'
 
     # Define ranges for new accounts
-    data.loc[data['campid'].between(406651, 406689), 'Account'] = 'TRAVADO PST-10'
-    data.loc[data['campid'].between(406541, 406570), 'Account'] = 'TRAVADO PST-11 PM'
+    data.loc[data['campid'].between(406541, 406555), 'Account'] = 'TRAVADO PST-11 PM'
     data.loc[data['campid'].between(406571, 406600), 'Account'] = 'TRAVADO PST-12 MB'
+    data.loc[data['campid'].between(406554, 406570), 'Account'] = 'Inuvo Fb APPD2 LG'
+    data.loc[data['campid'].between(406651, 406669), 'Account'] = 'Inuvo Fb APPD2 PM'
+    data.loc[data['campid'].between(406670, 406689), 'Account'] = 'Inuvo Fb APPD3 MB'
 
     return data
 
