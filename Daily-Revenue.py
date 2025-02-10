@@ -6,27 +6,33 @@ def map_accounts(data):
     """Map campid to Account Names based on specified ranges."""
     data['Account'] = pd.NA  # Initialize the Account column
 
-    # Define ranges for existing accounts
-    data.loc[data['campid'].between(391551, 391600), 'Account'] = 'Inuvo Fb APPD4'
-    data.loc[data['campid'].between(391450, 391499), 'Account'] = 'TRAVADO PST-1'
-    data.loc[data['campid'].between(406601, 406650), 'Account'] = 'TRAVADO PST-1'
-    data.loc[data['campid'].between(391500, 391549), 'Account'] = 'TRAVADO PST-2'
-    data.loc[data['campid'].between(391601, 391649), 'Account'] = 'TRAVADO PST-2'
-    data.loc[data['campid'].between(391801, 391850), 'Account'] = 'TRAVADO PST-3'
-    data.loc[data['campid'].between(391751, 391800), 'Account'] = 'TRAVADO PST-8'
-    data.loc[data['campid'].between(391850, 391900), 'Account'] = 'TRAVADO PST-4'
-    data.loc[data['campid'].between(391650, 391699), 'Account'] = 'TRAVADO PST-5'
-    data.loc[data['campid'].between(391700, 391750), 'Account'] = 'TRAVADO PST-6'
-    data.loc[data['campid'].between(391901, 391948), 'Account'] = 'TRAVADO PST-7'
-    data.loc[data['campid'].between(406488, 406537), 'Account'] = 'TRAVADO PST-9'
+    # Updated Account mapping
+    account_mapping = {
+        (411973, 412023): 'Inuvo Fb APPD1',
+        (406651, 406669): 'Inuvo Fb APPD2 PRUDV',
+        (406556, 406570): 'Inuvo Fb APPD2 LALITH',
+        (406670, 406689): 'Inuvo Fb APPD3 CHINNU',
+        (391551, 391600): 'Inuvo Fb APPD4 VB',
+        (391450, 391499): 'TRAVADO PST-1',
+        (406601, 406650): 'TRAVADO PST-1',
+        (391500, 391549): 'TRAVADO PST-2 DUTT',
+        (391601, 391649): 'TRAVADO PST-2 DUTT',
+        (391801, 391850): 'TRAVADO PST-3 HZ',
+        (391851, 391900): 'TRAVADO PST-4 HZ',
+        (391650, 391699): 'TRAVADO PST 10 VB',
+        (391700, 391750): 'TRAVADO PST 6 LG',
+        (391901, 391948): 'TRAVADO PST 7 PM',
+        (391751, 391800): 'TRAVADO PST 8 HZ',
+        (406488, 406540): 'TRAVADO PST 9 FRED',
+        (406651, 406689): 'TRAVADO PST 10 VB',
+        (406541, 406555): 'TRAVADO PST 11 PM',
+        (406571, 406600): 'TRAVADO PST 12 MB',
+        (412695, 412744): 'TRAVADO PST 13 NEW',
+    }
 
-    # Define ranges for new accounts
-    data.loc[data['campid'].between(406541, 406555), 'Account'] = 'TRAVADO PST-11 PM'
-    data.loc[data['campid'].between(406571, 406600), 'Account'] = 'TRAVADO PST-12 MB'
-    data.loc[data['campid'].between(406554, 406570), 'Account'] = 'Inuvo Fb APPD2 LG'
-    data.loc[data['campid'].between(406651, 406669), 'Account'] = 'Inuvo Fb APPD2 PM'
-    data.loc[data['campid'].between(406670, 406689), 'Account'] = 'Inuvo Fb APPD3 MB'
-
+    for (low, high), name in account_mapping.items():
+        data.loc[data['campid'].between(low, high), 'Account'] = name
+    
     return data
 
 # Function to process data into summaries
