@@ -12,7 +12,7 @@ def map_accounts(data):
         (406651, 406669): 'Inuvo Fb APPD2 PRUDV',
         (406556, 406570): 'Inuvo Fb APPD2 LALITH',
         (406670, 406689): 'Inuvo Fb APPD3 CHINNU',
-        (391551, 391600): 'Inuvo Fb APPD4 VB',
+        (391551, 391600): 'TRAVADO PST 10 VB',
         (391450, 391499): 'TRAVADO PST-1',
         (406601, 406650): 'TRAVADO PST-1',
         (391500, 391549): 'TRAVADO PST-2 DUTT',
@@ -23,11 +23,13 @@ def map_accounts(data):
         (391700, 391750): 'TRAVADO PST 6 LG',
         (391901, 391948): 'TRAVADO PST 7 PM',
         (391751, 391800): 'TRAVADO PST 8 HZ',
-        (406488, 406540): 'TRAVADO PST 9 FRED',
-        (406651, 406689): 'TRAVADO PST 10 VB',
-        (406541, 406555): 'TRAVADO PST 11 PM',
+        (406488, 406500): 'TRAVADO PST 9 FRED',
+        (406501, 406555): 'TRAVADO PST 11 PM',
         (406571, 406600): 'TRAVADO PST 12 MB',
         (412695, 412744): 'TRAVADO PST 13 NEW',
+        (412745, 412794): 'TRAVADO PST 14 Roy',
+        (412795, 412844): 'TRAVADO PST 15 Arn',
+        (412845, 412894): 'TRAVADO PST 16 Dnk',
     }
 
     for (low, high), name in account_mapping.items():
