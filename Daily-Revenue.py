@@ -9,7 +9,7 @@ def map_accounts(data):
     # Updated Account mapping
     account_mapping = [
         (411973, 412023, 'Inuvo Fb APPD1 Everyknown CHINNU'),
-        (412024, 412174, 'Inuvo Fb Everyknown-1 LALITH'),
+        (412024, 412124, 'Inuvo Fb Everyknown-1 LALITH'),
         (412175, 412224, 'Inuvo Fb Everyknown-2 HZ'),
         (406651, 406669, 'Inuvo Fb APPD2 PRUDV'),
         (406556, 406570, 'Inuvo Fb APPD2 LALITH'),
