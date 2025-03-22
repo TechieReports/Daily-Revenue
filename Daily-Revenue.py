@@ -30,7 +30,7 @@ def map_accounts(data):
         (406501, 406555, 'TRAVADO PST 11 PM'),
         (406571, 406600, 'TRAVADO PST 12 MB'),
         (412695, 412744, 'TRAVADO PST 13 NEW'),
-        (412745, 412794, 'TRAVADO PST 14 Roy'),
+        (412745, 412794, 'TRAVADO PST 12 MB'),
         (412795, 412844, 'TRAVADO PST 15 Arn'),
         (412845, 412894, 'TRAVADO PST 16 Dnk'),
     ]
