@@ -49,7 +49,7 @@ def process_data(raw_data):
     raw_data['date'] = pd.to_datetime(raw_data['date'])
 
     # Map accounts
-    data = ap_accounts(raw_data)
+    data = map_accounts(raw_data)
 
     # Account-wise Summary
     account_summary = data.groupby('Account', as_index=False).agg({
